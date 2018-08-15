@@ -1,0 +1,27 @@
+$sizes: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+
+@each $size in $sizes {
+	.m-#{$size} { margin-top: #{$size}px; }
+	.my-#{$size} { margin-top: #{$size}px; margin-bottom: #{$size}px; }
+	.mx-#{$size} { margin-left: #{$size}px; margin-right: #{$size}px;}
+	.mt-#{$size} { margin-top: #{$size}px; }
+	.mr-#{$size} { margin-right: #{$size}px; }
+	.mb-#{$size} { margin-bottom: #{$size}px; }
+	.ml-#{$size} { margin-left: #{$size}px; }
+
+	.p-#{$size}  { padding-top: #{$size}px; }
+	.py-#{$size} { padding-top: #{$size}px; padding-bottom: #{$size}px; }
+	.px-#{$size} { padding-left: #{$size}px; padding-right: #{$size}px;}
+	.pt-#{$size} { padding-top: #{$size}px; }
+	.pr-#{$size} { padding-right: #{$size}px; }
+	.pb-#{$size} { padding-bottom: #{$size}px; }
+	.pl-#{$size} { padding-left: #{$size}px; }
+}
+
+.bold { font-weight: $bold !important; }
+
+.bgc-greyish-teal {	background-color:$greyish-teal; }
+.bgc-cool-grey {	background-color: $cool-grey; }
+.bgc-pumpkin {	background-color: $pumpkin; }
+.bgc-dark-slate-blue {	background-color: $dark-slate-blue; }
+.bgc-dark {	background-color: $dark; }

@@ -1,0 +1,57 @@
+// Mixin for media queries based on bootstrap 4 mobile first & desktop first
+// Version 1.0
+@mixin media ($prefix) {
+	$sm: 576px;
+	$md: 768px;
+	$lg: 992px;
+	$xl: 1200px;
+
+	// ---- ---- MOBILE FIRST ---- ----
+	@if $prefix == sm-min {
+		@media screen and (min-width: #{$sm}) {
+			@content;
+		}
+	}
+	@else if $prefix == md-min {
+		@media screen and (min-width: #{$md}) {
+			@content;
+		}
+	}
+	@else if $prefix == lg-min {
+		@media screen and (min-width: #{$lg}) {
+			@content;
+		}
+	}
+	@else if $prefix == xl-min {
+		@media screen and (min-width: #{$xl}) {
+			@content;
+		}
+	}
+
+	// ---- ---- DESKTOP FIRST ---- ----
+	@if $prefix == sm-max {
+		@media screen and (max-width: $sm - 1px) {
+			@content;
+		}
+	}
+	@else if $prefix == md-max {
+		@media screen and (max-width: $md - 1px) {
+			@content;
+		}
+	}
+	@else if $prefix == lg-max {
+		@media screen and (max-width: $lg - 1px) {
+			@content;
+		}
+	}
+	@else if $prefix == xl-max {
+		@media screen and (max-width: $xl - 1px) {
+			@content;
+		}
+	}
+
+	// ---- ---- USAGE EXAMPLE ---- ----
+	// @include media(md-min) {
+	// 	color: brown;
+	// }
+}

@@ -1,0 +1,12 @@
+@mixin text-style ($family: 'StandardCT-5', $weight: 400, $size: 14px, $color: #000, $align: left, $line-height: auto, $spacing: normal) {
+	font: {
+		family: $family;
+		weight: $weight;
+		size: $size;
+	}
+
+	color: $color;
+	text-align: $align;
+	line-height: $line-height;
+	letter-spacing: $spacing;
+}
